@@ -12,7 +12,7 @@ My name is *Negar*, and I am a Ph.D. student in **the Big Data Analytics** progr
 
 ---
 
-And a few of ==my research interests== are:
+And a few of <mark>my research interests</mark> are:
 
 - Machine Learning and its applications
 
