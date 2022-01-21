@@ -1,0 +1,37 @@
+---
+title: "exploring_Rmarkdown"
+author: "Negar"
+date: "1/20/2022"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tibble)
+```
+
+```{r}
+library(knitr)
+mtcars_tbl <- as_tibble(mtcars, rownames = "model")
+
+mtcars
+mtcars_tbl
+knitr::kable(mtcars_tbl)
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
