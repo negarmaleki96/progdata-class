@@ -2,7 +2,9 @@
 title: "Lab 02 - Plastic waste"
 author: "Negar Maleki"
 date: "01/28/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ## Load packages and data
