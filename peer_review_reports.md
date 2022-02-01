@@ -1,6 +1,6 @@
 # Peer Review Reports
 
-# Lab Activity 1
+### Lab Activity 1
 
 https://github.com/oujah/progdata-class/issues/1
 
