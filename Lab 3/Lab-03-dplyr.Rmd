@@ -1,0 +1,123 @@
+---
+title: "Lab3"
+author: "Negar"
+date: "2/5/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load packages}
+# load your packages here:
+library(gapminder)
+library(tidyverse)
+```
+
+24.2.1 - 1.1
+```{r}
+gapminder |>
+  filter(country %in% c('China', 'Brazil', 'Australia'), 
+         year >= 1970 & year <= 1979)
+```
+
+24.2.2 - 1.2
+```{r}
+gapminder |>
+  filter(country %in% c('China', 'Brazil', 'Australia'), 
+         year >= 1970 & year <= 1979) |>
+  select(country, gdpPercap)
+```
+
+24.2.3 - 1.3
+```{r}
+new_object <- gapminder |>
+                mutate(lag_1_lifExp = lag(lifeExp, n = 1, default = 0), 
+                       change_in_lifExp = lifeExp - lag_1_lifExp) |>
+                filter(change_in_lifExp < 0)
+new_object <- new_object[, c("country", "continent", "year", "lifeExp", "pop",
+                             "gdpPercap", "change_in_lifExp", "lag_1_lifExp")]
+new_object
+```
+
+24.2.4 - 1.4
+```{r}
+gapminder |> 
+  group_by(country) |> 
+  summarize(max_gdpPercap = max(gdpPercap))
+```
+
+24.2.5 - 1.5
+```{r}
+library(ggplot2)
+ggplot(gapminder |>
+  filter(country == "Canada")) +
+  aes(x = lifeExp, y = gdpPercap) +
+  geom_point(color='darkgreen') +
+  scale_y_log10(name="log - GDP per Capita") +
+  xlab("Canada's Life Expectancy")
+```
+
+24.3.1 - 2.1
+```{r}
+library(ggplot2)
+library(palmerpenguins)
+data <- palmerpenguins::penguins
+data <- data %>% drop_na()
+stat_desc <- data |>
+          group_by(species) |>
+          select(bill_length_mm, bill_depth_mm) |>
+          summarise(sample_size = n(),
+                    mean_bill_length_mm = mean(bill_length_mm, na.rm = TRUE), 
+                    mean_bill_depth_mm = mean(bill_depth_mm, na.rm = TRUE),
+                    range_bill_length_mm = range(bill_length_mm, na.rm = TRUE), 
+                    range_bill_depth_mm = range(bill_depth_mm, na.rm = TRUE), 
+                    std_bill_length_mm = sd(bill_length_mm, na.rm = TRUE), 
+                    std_bill_depth_mm = sd(bill_depth_mm, na.rm = TRUE),
+                    median_bill_length_mm = median(bill_length_mm, 
+                                                   na.rm = TRUE), 
+                    median_bill_depth_mm = median(bill_depth_mm, na.rm = TRUE))
+# Transpose the dataset, for better displaying
+t(stat_desc)
+
+ggplot(data) +
+  aes(x = bill_length_mm, y = bill_depth_mm) +
+  geom_point(aes(color=species))
+```
+
+24.3.2 - 2.2
+```{r}
+data <- palmerpenguins::penguins
+data <- data %>% drop_na()
+stat_desc_2 <- data |>
+          select(island, body_mass_g) |>
+          group_by(island) |>
+          summarise(sample_size = n(),
+                    mean_body_mass_g = mean(body_mass_g, na.rm = TRUE), 
+                    std_body_mass_g = sd(body_mass_g, na.rm = TRUE),
+                    median_body_mass_g = median(body_mass_g, na.rm = TRUE))
+# Transpose the dataset, for better displaying
+t(stat_desc_2)
+
+ggplot(data, 
+       mapping = aes(x = island, y = body_mass_g)) +
+  geom_violin() +
+  geom_boxplot(width = .3, fill = "lightblue") +
+  geom_point() +
+  stat_summary(fun = median, geom = "point", color = "yellow") 
+```
+
+24.4 Bonus Exercise
+
+No it does not work. If we use the given code, we get half of the result, since "==" sign compare each element one by one is a roll, and if it is True, then display it in result. In this example, as the first and second row is "Afghanistan" and our vector is "c("Rwanda", "Afghanistan")", we get "FALSE, TRUE" result so then the first row will not display in the result.
+
+```{r}
+filter(gapminder, country == c("Rwanda", "Afghanistan"))
+```
+
+The correct code is as follow:
+```{r}
+gapminder |>
+  filter(country %in% c("Rwanda", "Afghanistan"))
+```
