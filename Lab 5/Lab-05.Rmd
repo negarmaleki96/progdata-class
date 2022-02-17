@@ -1,0 +1,40 @@
+---
+title: "Lab-05"
+author: "Negar"
+date: "2/17/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+library(tidyverse)
+lotr  <- read_csv("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/lotr_tidy.csv") |> 
+  rename(Species = Race)
+```
+
+
+
+```{r}
+lotr
+```
+
+```{r}
+lotr_wide <- lotr |>
+  pivot_wider(id_cols = c(Film, Gender),
+              names_from = Species,
+              values_from = Words)
+lotr_wide
+```
+
+```{r}
+lotr_wide |>
+  pivot_longer(cols = Elf:Man,
+               names_to = "Species",
+               values_to = "Words"
+               )
+```
