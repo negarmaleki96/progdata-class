@@ -1,0 +1,87 @@
+---
+title: "Lab-06"
+author: "Negar"
+date: "2/24/2022"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+Exercise 1: singer
+
+```{r}
+songs <- read_csv("https://raw.githubusercontent.com/bwiernik/progdata-class/master/data/singer/songs.csv")
+locations <- read_csv("https://raw.githubusercontent.com/bwiernik/progdata-class/master/data/singer/loc.csv")
+
+(time <- as_tibble(songs) |> 
+   rename(song = title))
+
+(album <- as_tibble(locations) |> 
+   select(title, everything()) |> 
+   rename(album = release,
+          song  = title))
+```
+
+1- 
+
+```{r}
+time |> 
+  left_join(album, by = c("song","artist_name"))
+```
+
+2-
+
+```{r}
+time |> 
+  full_join(album, by = c("song","artist_name"))
+```
+
+3-
+
+```{r}
+time |> 
+  anti_join(album, by = "song")
+```
+
+4-
+
+```{r}
+time |> 
+  anti_join(album, by = "artist_name")
+```
+
+5-
+
+```{r}
+time |> 
+  full_join(album, by = "song")
+```
+
+Exercise 2: LOTR
+
+```{r}
+fell <- read_csv("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Fellowship_Of_The_Ring.csv")
+ttow <- read_csv("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Two_Towers.csv")
+retk <- read_csv("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/The_Return_Of_The_King.csv")
+```
+
+```{r}
+retk |>
+  full_join(fell, by = c("Film", "Race", "Female", "Male")) |>
+  full_join(ttow, by = c("Film", "Race", "Female", "Male"))
+```
+
+```{r}
+fell |> 
+  anti_join(retk, by = "Race") |> 
+  anti_join(ttow, by = "Race")
+```
+
