@@ -1,0 +1,38 @@
+---
+title: "S15"
+author: "Negar"
+date: "3/1/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(gapminder)
+library(tidyverse)
+```
+
+```{r}
+(gap_asia_2007 <- gapminder |> filter(year == 2007, continent == "Asia"))
+write_csv(gap_asia_2007, here::here("exported_file.csv"))  #getwd() : what is working directory
+```
+
+```{r}
+dat <- read_csv(here::here("exported_file.csv"),
+                col_types = cols(     # change the type of columns
+                  country = col_factor(),
+                  continent = col_factor(),
+                  year = col_double(),
+                  lifeExp = col_double(),
+                  pop = col_double(),
+                  gdpPercap = col_double()
+                ))
+dat
+spec(dat) # show columns' types
+```
+
+```{r}
+readxl::read_excel()
+```
