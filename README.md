@@ -2,3 +2,5 @@
 
 This is for my programming with data class!
 
+Please check this link to see my first portfolio: https://github.com/negarmaleki96/progdata-class/tree/main/Portfolio/Portfolio1
+
