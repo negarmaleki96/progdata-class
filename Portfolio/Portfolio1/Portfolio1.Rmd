@@ -1,14 +1,14 @@
 ---
 title: "Portfolio1"
 author: "Negar"
-date: "3/15/2022"
+date: "4/09/2022"
 output:
   pdf_document: default
   html_document: default
 ---
 
 ### Summary
-This project is about student performance in exams. To observe how different factors affect the student's performance, we plot each factor against students' performances in couple of plot and describe the result briefly after each figure.
+This project is about topic modeling, which is an interesting task in NLP. In this project we are trying to identify major topics in unlabeled texts, and then see which words are essential for text that is labeled for topic.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
