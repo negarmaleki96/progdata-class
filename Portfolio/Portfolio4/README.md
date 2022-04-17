@@ -1,0 +1,3 @@
+This is an R Shiny App which shows laptop brands against different features each contains. This Shiny app has two tabs. The first tab gives an Introduction. In the second tab, I used Laptop Specs and latest price data from Kaggle in order to explore different brands in their operating systems.
+
+The scatter plot may not make sense for all the features, but I put all the features in the slider, because I think having the collection of features is interesting.
