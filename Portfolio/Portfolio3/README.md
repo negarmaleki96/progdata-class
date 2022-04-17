@@ -1,0 +1,1 @@
+This is an R Shiny App which shows the World Happiness in 2015-2022 in interactive visualization. There is two tab in my shiny app. In the first tab, I wrote an introduction. In the second tab, I used world happiness data from Kaggle in order to explore happiness ranking in countries of each region.
