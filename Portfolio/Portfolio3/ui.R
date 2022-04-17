@@ -44,7 +44,6 @@ second_panel <- tabPanel(
 )
 
 
-
 # User Interface -----------------------------------------------------
 ui <- navbarPage(
   "World Happiness",
