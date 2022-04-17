@@ -15,7 +15,7 @@ server <- function(input, output) {
                          levels = LD$brand[order(LD$os)])
     
     ggplot(data=LD, aes_string(x='brand', y=input$y_var, fill="os")) +
-      geom_point(stat="identity", width=0.8) +
+      geom_bar(stat="identity", width=0.8) +
       #scale_x_discrete(guide = guide_axis(n.dodge=3))+
       scale_y_discrete(guide = guide_axis(n.dodge=2))+
       labs(x="Brand", y=input$y_var) + coord_flip()
