@@ -1,52 +1,60 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable
-  matter.
+title: "Shilaan Alzahawi"
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
-highlight_name: true
+  - course: MSc in Business Administration
+    institution: Rotterdam School of Management
+    year: 2017
+  - course: BSc in Public Administration Science
+    institution: Erasmus School of Social and Behavioral Sciences
+    year: 2014
+  - course: LLB in Law
+    institution: Erasmus School of Law
+    year: 2014
+email: shilaan@stanford.edu
+highlight_name: no
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Statistical Inference
+- Experimental Design
+- Open and Reproducible Science
+- Team and Crowdsourced Science
 organizations:
 - name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+  url: https://datascience.stanford.edu/people/shilaan-alzahawi
+role: PhD student in Organizational Behavior
 social:
 - icon: envelope
   icon_pack: fas
-  link: /#contact
+  link: mailto:shilaan@stanford.edu 
 - display:
-    header: true
+    header: yes
   icon: twitter
   icon_pack: fab
-  label: Follow me on Twitter
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  label: Find me on Twitter
+  link: https://twitter.com/shilaan01
+#- icon: google-scholar
+#  icon_pack: ai
+#  link: https://scholar.google.com/citations?user=FNPgIGAAAAAJ&hl=en&oi=sra
+- icon: osf
+  icon_pack: ai
+  link: https://osf.io/ug7xd/ 
+- icon: orcid
+  icon_pack: ai
+  link: http://orcid.org/0000-0002-6892-4643 
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/shilaan
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
-superuser: true
-title: Alice Bighetti (吳恩達)
+  link: https://www.linkedin.com/in/shilaanalzahawi/
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/shilaan01/ 
+superuser: yes
+bio: My research interests include statistics, meta-science, and crowdsourced science
+greeting: alzahawi::shilaan()
 ---
 
-Alice Bighetti is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I am a PhD student in Organizational Behavior at the Stanford Graduate School of Business and an Affiliate at the Stanford Data Science Center for Open and Reproducible Science (SDS-CORES). My research interests include statistics, meta-science, and crowdsourced science. I am passionate about the development and implementation of tools that increase the rigor, reproducibility, and transparency of scientific research. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+My favorite letter in the alphabet is R, and I am weirdly evangelical about it. I co-teach Data & Decisions --- a graduate-level, introductory class on probability and statistics using {{< icon name="r-project" pack="fab" >}} --- and I'm a technical mentor for the Stanford Data Science for Social Good program. I learn by teaching, so I consider myself very lucky! 
