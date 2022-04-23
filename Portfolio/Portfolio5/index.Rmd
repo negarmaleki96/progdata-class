@@ -12,7 +12,6 @@ links:
     url: "mailto:negarmaleki@usf.edu"
 output:
   html_document
-  postcards::trestles
 ---
 
 
