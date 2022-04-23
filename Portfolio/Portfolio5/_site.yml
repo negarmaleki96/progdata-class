@@ -1,5 +1,6 @@
 navbar: 
   title: Introduction
+  href: index.html
   left:
   - text: Portfolio
     href: content.html
