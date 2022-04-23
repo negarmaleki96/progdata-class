@@ -1,3 +1,3 @@
-This is an R Shiny App which shows laptop brands against different features each contains. This Shiny app has two tabs. The first tab gives an Introduction. In the second tab, I used Laptop Specs and latest price data from Kaggle in order to explore different brands in their operating systems.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/691ac383-a58a-4bbe-8dd0-26b0fa4f0248/deploy-status)](https://app.netlify.com/sites/negarmaleki-website/deploys)
 
-The scatter plot may not make sense for all the features, but I put all the features in the slider, because I think having the collection of features is interesting.
+This is my Website, please [click here!](https://6263b0e659008200098d07ab--negarmaleki-website.netlify.app/index.html)
