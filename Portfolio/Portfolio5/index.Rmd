@@ -1,5 +1,8 @@
 ---
-site: blogdown:::blogdown_site
+title: "Main Title"
+author: "Negar"
+date: "4/22/2022"
+output: html_document
 ---
 
-<!-- This file is for blogdown only. Please do not edit it. -->
+This is what will show up on the main page.
