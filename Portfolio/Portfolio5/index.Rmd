@@ -10,8 +10,9 @@ links:
     url: "https://scholar.google.com/citations?hl=en&user=HZQkTO8AAAAJ"
   - label: Contact
     url: "mailto:negarmaleki@usf.edu"
-output:
-  html_document
+output:   
+  html_document: 
+    df_print: paged
 ---
 
 
