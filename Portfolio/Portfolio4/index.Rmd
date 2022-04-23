@@ -29,7 +29,7 @@ table, th, td {
 <table style="width:100%">
   <tr>
     <td><img src="profile.jpg" style="width:90%"></td>
-    <td><p style="color:#2c3e50;font-size:20px">Negar Maleki received his bachelor's and master's degree in Industrial Engineering in 2018 and 2020. Currently, She is a Ph.D. student in Big Data Analysis at Muma College of Business at the University of South Florida. She is passionate about data-driven decision-making and real-world problem solving using Big Data tools, Machine Learning, Deep Learning, and Data Analysis.</p></td>
+    <td><p style="color:#2c3e50;font-size:20px">Negar Maleki received her bachelor's and master's degree in Industrial Engineering in 2018 and 2020. Currently, She is a Ph.D. student in Big Data Analysis at Muma College of Business at the University of South Florida. She is passionate about data-driven decision-making and real-world problem solving using Big Data tools, Machine Learning, Deep Learning, and Data Analysis.</p></td>
   </tr>
 </table>
 
